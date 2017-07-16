@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TekkenMaster.UWP")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Tekken Mastering App (UWP version)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("TekkenMaster.UWP")]
