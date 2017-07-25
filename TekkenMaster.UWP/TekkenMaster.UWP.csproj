@@ -102,18 +102,44 @@
     </Compile>
     <Compile Include="PageTokens.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AntiOpponentStrategyViewModel.cs" />
+    <Compile Include="ViewModels\BasicMoveListViewModel.cs" />
     <Compile Include="ViewModels\MenuItemViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\SecondPageViewModel.cs" />
+    <Compile Include="Views\DefensiveStrategyPage.xaml.cs">
+      <DependentUpon>DefensiveStrategyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BasicMoveListPage.xaml.cs">
+      <DependentUpon>BasicMoveListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ComboListPage.xaml.cs">
+      <DependentUpon>ComboListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PunishmentPage.xaml.cs">
+      <DependentUpon>PunishmentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SecondPage.xaml.cs">
       <DependentUpon>SecondPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialMoveListPage.xaml.cs">
+      <DependentUpon>SpecialMoveListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OffensiveStrategyPage.xaml.cs">
+      <DependentUpon>OffensiveStrategyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThrowMoveListPage.xaml.cs">
+      <DependentUpon>ThrowMoveListPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +171,23 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="Themes\SampleStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\DefensiveStrategyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BasicMoveListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ComboListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,12 +196,37 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PunishmentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SecondPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\SpecialMoveListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OffensiveStrategyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ThrowMoveListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TekkenLibrary\TekkenLibrary.csproj">
+      <Project>{5e77ffae-a33d-44d9-b7ed-6c078e3897f4}</Project>
+      <Name>TekkenLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

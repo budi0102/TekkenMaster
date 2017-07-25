@@ -4,9 +4,18 @@
                                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                                  xmlns:local="using:TekkenMaster.UWP.Views"
                                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                                 xmlns:vm="using:TekkenMaster.UWP.ViewModels"
                                  xmlns:prismMvvm="using:Prism.Windows.Mvvm"
                                  prismMvvm:ViewModelLocator.AutoWireViewModel="True"
                                  mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="MenuItemDataTemplate" x:DataType="vm:MenuItemViewModel">
+            <Grid>
+                <Button Content="{x:Bind Path=DisplayName}" Margin="10" Height="250" Width="250"
+                        Command="{x:Bind Path=Command}"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!--<TextBlock HorizontalAlignment="Center"
@@ -17,5 +26,14 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Tekken 7"/>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding Menus, Mode=OneTime}"
+                      ItemTemplate="{StaticResource MenuItemDataTemplate}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VariableSizedWrapGrid Margin="20"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
     </Grid>
 </prismMvvm:SessionStateAwarePage>

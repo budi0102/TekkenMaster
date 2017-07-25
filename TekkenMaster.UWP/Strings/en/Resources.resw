@@ -117,10 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BasicMoveListPageMenuItemDisplayName" xml:space="preserve">
+    <value>Basic Move List page</value>
+  </data>
+  <data name="CharacterDescription" xml:space="preserve">
+    <value>Character Description</value>
+  </data>
+  <data name="CharacterIntroduction" xml:space="preserve">
+    <value>Character Introduction</value>
+  </data>
+  <data name="DefensiveStrategyMenuItemDisplayName" xml:space="preserve">
+    <value>Defensive Strategy page</value>
+  </data>
   <data name="MainPageMenuItemDisplayName" xml:space="preserve">
     <value>Main page</value>
   </data>
-  <data name="SecondPageMenuItemDisplayName" xml:space="preserve">
-    <value>Second page</value>
+  <data name="OffensiveStrategyMenuItemDisplayName" xml:space="preserve">
+    <value>Offensive Strategy page</value>
+  </data>
+  <data name="ProfilePageMenuItemDisplayName" xml:space="preserve">
+    <value>Profile page</value>
+  </data>
+  <data name="PunishmentPageMenuItemDisplayName" xml:space="preserve">
+    <value>Punishment page</value>
+  </data>
+  <data name="SpecialMoveListPageMenuItemDisplayName" xml:space="preserve">
+    <value>Special Move List page</value>
+  </data>
+  <data name="Tekken7.Text" xml:space="preserve">
+    <value>Tekken 7</value>
+  </data>
+  <data name="ThrowMoveListPageMenuItemDisplayName" xml:space="preserve">
+    <value>Throw Move List page</value>
   </data>
 </root>

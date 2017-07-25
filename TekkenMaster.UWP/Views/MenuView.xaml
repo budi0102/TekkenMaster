@@ -50,6 +50,6 @@
                       Margin="0,48,0,0"
                       IsTabStop="False"
                       ItemTemplate="{StaticResource MenuItemTemplate}"
-                      ItemsSource="{x:Bind Path=ConcreteDataContext.Commands}" />
+                      ItemsSource="{x:Bind Path=ConcreteDataContext.Menus}" />
     </Grid>
 </UserControl>
