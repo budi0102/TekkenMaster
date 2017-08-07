@@ -25,6 +25,12 @@ namespace TekkenLibrary
         #region Methods
         public static async Task<Master> LoadAllAsync(string directoryPath)
         {
+            bool isOK = await CreateDB();
+            if(!isOK)
+            {
+                return null;
+            }
+
             string[] filenames = Directory.GetFiles(directoryPath);
             Master result = new Master();
             result.Characters = new ObservableCollection<Character>();
@@ -55,6 +61,11 @@ namespace TekkenLibrary
         }
         public static async Task SaveAllAsync(string directoryPath, Master master)
         {
+            bool isOK = await CreateDB();
+            if (!isOK)
+            {
+                return;
+            }
 
             foreach (Character character in master.Characters)
             {
@@ -63,7 +74,7 @@ namespace TekkenLibrary
         }
         public static async Task SaveCharacter(Character character)
         {
-            if(character == null)
+            if (character == null)
             {
                 return;
             }
@@ -75,6 +86,22 @@ namespace TekkenLibrary
             }
         }
 
+
+        public static async Task<bool> CreateDB()
+        {
+            if (!Directory.Exists(DirectoryPath))
+            {
+                try
+                {
+                    Directory.CreateDirectory(DirectoryPath);
+                }
+                catch (IOException)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         #endregion
 
 

@@ -4,6 +4,8 @@
                                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                                  xmlns:v="using:TekkenMaster.UWP.Views"
                                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                                 xmlns:i="using:Microsoft.Xaml.Interactivity"
+                                 xmlns:c="using:Microsoft.Xaml.Interactions.Core"
                                  xmlns:vm="using:TekkenMaster.UWP.ViewModels"
                                  xmlns:prismMvvm="using:Prism.Windows.Mvvm"
                                  prismMvvm:ViewModelLocator.AutoWireViewModel="True"
@@ -16,6 +18,13 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
+    <i:Interaction.Behaviors>
+        <c:EventTriggerBehavior EventName="Loaded">
+            <c:EventTriggerBehavior.Actions>
+                <c:InvokeCommandAction Command="{Binding LoadedCommand, Mode=OneTime}"/>
+            </c:EventTriggerBehavior.Actions>
+        </c:EventTriggerBehavior>
+    </i:Interaction.Behaviors>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!--<TextBlock HorizontalAlignment="Center"

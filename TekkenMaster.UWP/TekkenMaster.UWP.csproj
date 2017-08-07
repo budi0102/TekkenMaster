@@ -105,6 +105,7 @@
     <Compile Include="ViewModels\CharactersViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModel.cs" />
     <Compile Include="ViewModels\ComboListViewModel.cs" />
+    <Compile Include="ViewModels\MoveListItemViewModel.cs" />
     <Compile Include="ViewModels\ThrowMoveListViewModel.cs" />
     <Compile Include="ViewModels\SpecialMoveListViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
@@ -236,6 +237,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Strings\ja\" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
+      <Name>Behaviors SDK %28XAML%29</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

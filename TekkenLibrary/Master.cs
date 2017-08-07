@@ -31,9 +31,13 @@ namespace TekkenLibrary
         #endregion
 
         #region Methods
-        public async Task Load()
+        public async Task LoadAsync()
         {
             await DB.LoadAllAsync(DB.DirectoryPath);
+        }
+        public async Task SaveAsync()
+        {
+            await DB.SaveAllAsync(DB.DirectoryPath, this);
         }
 
         #endregion
