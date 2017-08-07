@@ -10,6 +10,7 @@ using Prism.Windows.AppModel;
 using Prism.Commands;
 using Microsoft.Practices.Unity;
 using Prism.Unity.Windows;
+using System.Windows.Input;
 
 namespace TekkenMaster.UWP.ViewModels
 {
@@ -29,18 +30,20 @@ namespace TekkenMaster.UWP.ViewModels
             _navigationService = navigationService;
             _sessionStateService = sessionStateService;
             _unityContainer = unityContainer;
-            MenuViewModel menuViewModel = _unityContainer.TryResolve<MenuViewModel>();
-            Menus = new ObservableCollection<MenuItemViewModel>();
-            for (int i = 1; i < menuViewModel.Menus.Count; i++)
+            if (MenuViewModel.StaticMenus != null)
             {
-                Menus.Add(menuViewModel.Menus[i]);
+                Menus = new ObservableCollection<MenuItemViewModel>(MenuViewModel.StaticMenus.Skip(1));
             }
-
-            DisplayText = "This is the main page!";
+            else
+            {
+                MenuViewModel menuViewModel = _unityContainer.TryResolve<MenuViewModel>();
+                Menus = new ObservableCollection<MenuItemViewModel>(menuViewModel.Menus.Skip(1));
+            }
+            LoadedCommand = new DelegateCommand(Loaded);
         }
 
-        public string DisplayText { get; private set; }
         public ObservableCollection<MenuItemViewModel> Menus { get; private set; }
+        public ICommand LoadedCommand { get; private set; }
 
         #region Methods
         private void OnNavigationStateChanged(NavigationStateChangedEventArgs args)
@@ -84,6 +87,12 @@ namespace TekkenMaster.UWP.ViewModels
             {
                 (menu.Command as DelegateCommand).RaiseCanExecuteChanged();
             }
+        }
+
+        private void Loaded()
+        {
+            TekkenLibrary.Master.Instance.Load();
+            _unityContainer.TryResolve<CharactersViewModel>().Characters = CharactersViewModel.LoadCharacters(TekkenLibrary.Master.Instance.Characters);
         }
         #endregion
     }

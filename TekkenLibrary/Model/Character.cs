@@ -12,6 +12,8 @@ namespace TekkenLibrary.Model
 
         #region Public Properties
         public string Name { get; set; }
+        public string FullName { get; set; }
+        public string ShortName { get; set; }
         public string Introduction { get; set; }
         public string Description { get; set; }
         public ObservableCollection<MoveList> BasicMoveList { get; set; }

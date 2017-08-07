@@ -14,6 +14,14 @@ namespace TekkenMaster.UWP.ViewModels
 {
     public class MenuViewModel : ViewModelBase
     {
+        #region Static Members
+        public static ObservableCollection<MenuItemViewModel> StaticMenus { get; private set; }
+        #endregion
+
+        #region Public Properties
+        public ObservableCollection<MenuItemViewModel> Menus { get; set; }
+        #endregion
+
         #region private Fields
         private const string CurrentPageTokenKey = "CurrentPageToken";
         private Dictionary<PageTokens, bool> _canNavigateLookup;
@@ -29,19 +37,21 @@ namespace TekkenMaster.UWP.ViewModels
             _navigationService = navigationService;
             _sessionStateService = sessionStateService;
 
-            Menus =new ObservableCollection<MenuItemViewModel>
+            if (StaticMenus == null)
             {
-                new MenuItemViewModel { DisplayName = resourceLoader.GetString("MainPageMenuItemDisplayName"), FontIcon = "\ue15f", Command = new DelegateCommand(() => NavigateToPage(PageTokens.Main), () => CanNavigateToPage(PageTokens.Main)) },
-                //new MenuItemViewModel { DisplayName = resourceLoader.GetString("SecondPageMenuItemDisplayName"), FontIcon = "\ue19f", Command = new DelegateCommand(() => NavigateToPage(PageTokens.Second), () => CanNavigateToPage(PageTokens.Second)) },
-                new MenuItemViewModel { DisplayName = resourceLoader.GetString("ProfilePageMenuItemDisplayName"), FontIcon = "①", Command = new DelegateCommand(() => NavigateToPage(PageTokens.Profile), () => CanNavigateToPage(PageTokens.Profile)) },
-                new MenuItemViewModel { DisplayName = resourceLoader.GetString("BasicMoveListPageMenuItemDisplayName"), FontIcon = "②", Command = new DelegateCommand(() => NavigateToPage(PageTokens.BasicMoveList), () => CanNavigateToPage(PageTokens.BasicMoveList)) },
-                new MenuItemViewModel { DisplayName = resourceLoader.GetString("ThrowMoveListPageMenuItemDisplayName"), FontIcon = "③", Command = new DelegateCommand(() => NavigateToPage(PageTokens.ThrowMoveList), () => CanNavigateToPage(PageTokens.ThrowMoveList)) },
-                new MenuItemViewModel { DisplayName = resourceLoader.GetString("SpecialMoveListPageMenuItemDisplayName"), FontIcon = "④", Command = new DelegateCommand(() => NavigateToPage(PageTokens.SpecialMoveList), () => CanNavigateToPage(PageTokens.SpecialMoveList)) },
-                new MenuItemViewModel { DisplayName = resourceLoader.GetString("PunishmentPageMenuItemDisplayName"), FontIcon = "⑤", Command = new DelegateCommand(() => NavigateToPage(PageTokens.Punishment), () => CanNavigateToPage(PageTokens.Punishment)) },
-                new MenuItemViewModel { DisplayName = resourceLoader.GetString("OffensiveStrategyMenuItemDisplayName"), FontIcon = "⑥", Command = new DelegateCommand(() => NavigateToPage(PageTokens.OffensiveStrategy), () => CanNavigateToPage(PageTokens.OffensiveStrategy)) },
-                new MenuItemViewModel { DisplayName = resourceLoader.GetString("DefensiveStrategyMenuItemDisplayName"), FontIcon = "⑦", Command = new DelegateCommand(() => NavigateToPage(PageTokens.DefensiveStrategy), () => CanNavigateToPage(PageTokens.DefensiveStrategy)) }
-            };
-            StaticMenus = Menus;
+                StaticMenus = new ObservableCollection<MenuItemViewModel>
+                {
+                    new MenuItemViewModel { DisplayName = resourceLoader.GetString("MainPageMenuItemDisplayName"), FontIcon = "\ue15f", Command = new DelegateCommand(() => NavigateToPage(PageTokens.Main), () => CanNavigateToPage(PageTokens.Main)) },
+                    new MenuItemViewModel { DisplayName = resourceLoader.GetString("ProfilePageMenuItemDisplayName"), FontIcon = "\u2781", Command = new DelegateCommand(() => NavigateToPage(PageTokens.Profile), () => CanNavigateToPage(PageTokens.Profile)) },
+                    new MenuItemViewModel { DisplayName = resourceLoader.GetString("BasicMoveListPageMenuItemDisplayName"), FontIcon = "\u2782", Command = new DelegateCommand(() => NavigateToPage(PageTokens.BasicMoveList), () => CanNavigateToPage(PageTokens.BasicMoveList)) },
+                    new MenuItemViewModel { DisplayName = resourceLoader.GetString("ThrowMoveListPageMenuItemDisplayName"), FontIcon = "\u2783", Command = new DelegateCommand(() => NavigateToPage(PageTokens.ThrowMoveList), () => CanNavigateToPage(PageTokens.ThrowMoveList)) },
+                    new MenuItemViewModel { DisplayName = resourceLoader.GetString("SpecialMoveListPageMenuItemDisplayName"), FontIcon = "\u2784", Command = new DelegateCommand(() => NavigateToPage(PageTokens.SpecialMoveList), () => CanNavigateToPage(PageTokens.SpecialMoveList)) },
+                    new MenuItemViewModel { DisplayName = resourceLoader.GetString("PunishmentPageMenuItemDisplayName"), FontIcon = "\u2785", Command = new DelegateCommand(() => NavigateToPage(PageTokens.Punishment), () => CanNavigateToPage(PageTokens.Punishment)) },
+                    new MenuItemViewModel { DisplayName = resourceLoader.GetString("OffensiveStrategyMenuItemDisplayName"), FontIcon = "\u2786", Command = new DelegateCommand(() => NavigateToPage(PageTokens.OffensiveStrategy), () => CanNavigateToPage(PageTokens.OffensiveStrategy)) },
+                    new MenuItemViewModel { DisplayName = resourceLoader.GetString("DefensiveStrategyMenuItemDisplayName"), FontIcon = "\u2787", Command = new DelegateCommand(() => NavigateToPage(PageTokens.DefensiveStrategy), () => CanNavigateToPage(PageTokens.DefensiveStrategy)) },
+                };
+            }
+            Menus = StaticMenus;
 
             _canNavigateLookup = new Dictionary<PageTokens, bool>();
 
@@ -61,11 +71,6 @@ namespace TekkenMaster.UWP.ViewModels
                 }
             }
         }
-        #endregion
-
-        #region Public Properties
-        public static ObservableCollection<MenuItemViewModel> StaticMenus { get; set; }
-        public ObservableCollection<MenuItemViewModel> Menus { get; set; }
         #endregion
 
         #region Methods

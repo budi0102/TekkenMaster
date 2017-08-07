@@ -117,8 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Alisa" xml:space="preserve">
+    <value>Alisa</value>
+  </data>
+  <data name="AlisaBosconovitch" xml:space="preserve">
+    <value>Alisa Bosconovitch</value>
+  </data>
+  <data name="Asuka" xml:space="preserve">
+    <value>Asuka</value>
+  </data>
+  <data name="AsukaKazama" xml:space="preserve">
+    <value>Asuka Kazama</value>
+  </data>
   <data name="BasicMoveListPageMenuItemDisplayName" xml:space="preserve">
     <value>Basic Move List page</value>
+  </data>
+  <data name="Bob" xml:space="preserve">
+    <value>Bob</value>
+  </data>
+  <data name="BobRichards" xml:space="preserve">
+    <value>Bob Richards</value>
+  </data>
+  <data name="Bryan" xml:space="preserve">
+    <value>Bryan</value>
+  </data>
+  <data name="BryanFury" xml:space="preserve">
+    <value>Bryan Fury</value>
   </data>
   <data name="CharacterDescription" xml:space="preserve">
     <value>Character Description</value>
@@ -126,14 +150,176 @@
   <data name="CharacterIntroduction" xml:space="preserve">
     <value>Character Introduction</value>
   </data>
+  <data name="CharactersPageMenuItemDisplayName" xml:space="preserve">
+    <value>Characters page</value>
+  </data>
+  <data name="Chloe" xml:space="preserve">
+    <value>Chloe</value>
+  </data>
+  <data name="Claudio" xml:space="preserve">
+    <value>Claudio</value>
+  </data>
+  <data name="ClaudioSerafino" xml:space="preserve">
+    <value>Claudio Serafino</value>
+  </data>
   <data name="DefensiveStrategyMenuItemDisplayName" xml:space="preserve">
     <value>Defensive Strategy page</value>
+  </data>
+  <data name="DevilJin" xml:space="preserve">
+    <value>Devil Jin</value>
+  </data>
+  <data name="Dragunov" xml:space="preserve">
+    <value>Dragunov</value>
+  </data>
+  <data name="Eddy" xml:space="preserve">
+    <value>Eddy</value>
+  </data>
+  <data name="EddyGordo" xml:space="preserve">
+    <value>Eddy Gordy</value>
+  </data>
+  <data name="EleonoreKliesen" xml:space="preserve">
+    <value>Eleonore Kliesen</value>
+  </data>
+  <data name="Eliza" xml:space="preserve">
+    <value>Eliza</value>
+  </data>
+  <data name="EmilieDeRochefort" xml:space="preserve">
+    <value>Emilie De Rochefort</value>
+  </data>
+  <data name="Feng" xml:space="preserve">
+    <value>Feng</value>
+  </data>
+  <data name="FengWei" xml:space="preserve">
+    <value>Feng Wei</value>
+  </data>
+  <data name="GeeseHoward" xml:space="preserve">
+    <value>Geese Howard</value>
+  </data>
+  <data name="Gigas" xml:space="preserve">
+    <value>Gigas</value>
+  </data>
+  <data name="Gouki" xml:space="preserve">
+    <value>Gouki</value>
+  </data>
+  <data name="Heihachi" xml:space="preserve">
+    <value>Heihachi</value>
+  </data>
+  <data name="HeihachiMishima" xml:space="preserve">
+    <value>Heihachi Mishima</value>
+  </data>
+  <data name="Hwoarang" xml:space="preserve">
+    <value>Hwoarang</value>
+  </data>
+  <data name="Jack7" xml:space="preserve">
+    <value>Jack 7</value>
+  </data>
+  <data name="Jin" xml:space="preserve">
+    <value>Jin</value>
+  </data>
+  <data name="JinKazama" xml:space="preserve">
+    <value>Jin Kazama</value>
+  </data>
+  <data name="Josie" xml:space="preserve">
+    <value>Josie</value>
+  </data>
+  <data name="JosieRizal" xml:space="preserve">
+    <value>Josie Rizal</value>
+  </data>
+  <data name="Katarina" xml:space="preserve">
+    <value>Katarina</value>
+  </data>
+  <data name="KatarinaAlves" xml:space="preserve">
+    <value>Katarina Alves</value>
+  </data>
+  <data name="Kazumi" xml:space="preserve">
+    <value>Kazumi</value>
+  </data>
+  <data name="KazumiHachijo" xml:space="preserve">
+    <value>Kazumi Hachijo</value>
+  </data>
+  <data name="Kazuya" xml:space="preserve">
+    <value>Kazuya</value>
+  </data>
+  <data name="KazuyaMishima" xml:space="preserve">
+    <value>Kazuya Mishima</value>
+  </data>
+  <data name="King" xml:space="preserve">
+    <value>King</value>
+  </data>
+  <data name="Kuma" xml:space="preserve">
+    <value>Kuma</value>
+  </data>
+  <data name="KumaPanda" xml:space="preserve">
+    <value>Kuma/ Panda</value>
+  </data>
+  <data name="Lars" xml:space="preserve">
+    <value>Lars</value>
+  </data>
+  <data name="LarsAlexandersson" xml:space="preserve">
+    <value>Lars Alexandersson</value>
+  </data>
+  <data name="Law" xml:space="preserve">
+    <value>Law</value>
+  </data>
+  <data name="Lee" xml:space="preserve">
+    <value>Lee</value>
+  </data>
+  <data name="LeeChaolan" xml:space="preserve">
+    <value>Lee Chaolan</value>
+  </data>
+  <data name="LeeViolet" xml:space="preserve">
+    <value>Lee/ Violet</value>
+  </data>
+  <data name="Leo" xml:space="preserve">
+    <value>Leo</value>
+  </data>
+  <data name="LeoKliesen" xml:space="preserve">
+    <value>Leo Kliesen</value>
+  </data>
+  <data name="Lili" xml:space="preserve">
+    <value>Lili</value>
+  </data>
+  <data name="LingXiaoYu" xml:space="preserve">
+    <value>Ling Xiao Yu</value>
+  </data>
+  <data name="LuckyChloe" xml:space="preserve">
+    <value>Lucky Chloe</value>
   </data>
   <data name="MainPageMenuItemDisplayName" xml:space="preserve">
     <value>Main page</value>
   </data>
+  <data name="MarshallLaw" xml:space="preserve">
+    <value>Marshall Law</value>
+  </data>
+  <data name="MasterRaven" xml:space="preserve">
+    <value>MasterRaven</value>
+  </data>
+  <data name="Miguel" xml:space="preserve">
+    <value>Miguel</value>
+  </data>
+  <data name="MiguelCaballeroRojo" xml:space="preserve">
+    <value>Miguel Caballero Rojo</value>
+  </data>
+  <data name="MRaven" xml:space="preserve">
+    <value>M.Raven</value>
+  </data>
+  <data name="Nina" xml:space="preserve">
+    <value>Nina</value>
+  </data>
+  <data name="NinaWilliams" xml:space="preserve">
+    <value>Nina Williams</value>
+  </data>
   <data name="OffensiveStrategyMenuItemDisplayName" xml:space="preserve">
     <value>Offensive Strategy page</value>
+  </data>
+  <data name="Panda" xml:space="preserve">
+    <value>Panda</value>
+  </data>
+  <data name="Paul" xml:space="preserve">
+    <value>Paul</value>
+  </data>
+  <data name="PaulPhoenix" xml:space="preserve">
+    <value>Paul Phoenix</value>
   </data>
   <data name="ProfilePageMenuItemDisplayName" xml:space="preserve">
     <value>Profile page</value>
@@ -141,13 +327,34 @@
   <data name="PunishmentPageMenuItemDisplayName" xml:space="preserve">
     <value>Punishment page</value>
   </data>
+  <data name="Raven" xml:space="preserve">
+    <value>Raven</value>
+  </data>
+  <data name="SergeiDragunov" xml:space="preserve">
+    <value>Sergei Dragunov</value>
+  </data>
+  <data name="Shaheen" xml:space="preserve">
+    <value>Shaheen</value>
+  </data>
   <data name="SpecialMoveListPageMenuItemDisplayName" xml:space="preserve">
     <value>Special Move List page</value>
+  </data>
+  <data name="Steve" xml:space="preserve">
+    <value>Steve</value>
+  </data>
+  <data name="SteveFox" xml:space="preserve">
+    <value>Steve Fox</value>
   </data>
   <data name="Tekken7.Text" xml:space="preserve">
     <value>Tekken 7</value>
   </data>
   <data name="ThrowMoveListPageMenuItemDisplayName" xml:space="preserve">
     <value>Throw Move List page</value>
+  </data>
+  <data name="Xiaoyu" xml:space="preserve">
+    <value>Xiao Yu</value>
+  </data>
+  <data name="Yoshimitsu" xml:space="preserve">
+    <value>Yoshimitsu</value>
   </data>
 </root>

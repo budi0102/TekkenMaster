@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 using TekkenLibrary.Model;
 
 namespace TekkenLibrary
@@ -30,9 +31,9 @@ namespace TekkenLibrary
         #endregion
 
         #region Methods
-        public void Load()
+        public async Task Load()
         {
-
+            await DB.LoadAllAsync(DB.DirectoryPath);
         }
 
         #endregion

@@ -10,7 +10,6 @@ namespace TekkenMaster.UWP
     public enum PageTokens
     {
         Main,
-        Second,
         Profile,
         BasicMoveList,
         ThrowMoveList,
