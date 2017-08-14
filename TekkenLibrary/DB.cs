@@ -104,7 +104,6 @@ namespace TekkenLibrary
         }
         #endregion
 
-
         #region Serialization
         public static string SerializeJson(Character character)
         {

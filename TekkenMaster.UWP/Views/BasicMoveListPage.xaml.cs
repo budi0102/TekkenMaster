@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TekkenMaster.UWP.ViewModels;
+using System.ComponentModel;
 
 // 空白ページの項目テンプレートについては、https://go.microsoft.com/fwlink/?LinkId=234238 を参照してください
 
@@ -25,6 +27,26 @@ namespace TekkenMaster.UWP.Views
         public BasicMoveListPage()
         {
             this.InitializeComponent();
+            DataContextChanged += MainPage_DataContextChanged;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public BasicMoveListViewModel ConcreteDataContext
+        {
+            get
+            {
+                return DataContext as BasicMoveListViewModel;
+            }
+        }
+
+        private void MainPage_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
+        {
+            var propertyChanged = PropertyChanged;
+            if (propertyChanged != null)
+            {
+                propertyChanged(this, new PropertyChangedEventArgs(nameof(ConcreteDataContext)));
+            }
         }
     }
 }

@@ -16,11 +16,11 @@ namespace TekkenLibrary.Model
         public string ShortName { get; set; }
         public string Introduction { get; set; }
         public string Description { get; set; }
-        public ObservableCollection<MoveList> BasicMoveList { get; set; }
-        public ObservableCollection<MoveList> SpecialMoveList { get; set; }
-        public ObservableCollection<MoveList> TenHitMoveList { get; set; }
-        public ObservableCollection<MoveList> ThrowMoveList { get; set; }
-        public ObservableCollection<MoveList> ComboList { get; set; } 
+        public MoveList BasicMoveList { get; set; }
+        public MoveList SpecialMoveList { get; set; }
+        public MoveList TenHitMoveList { get; set; }
+        public MoveList ThrowMoveList { get; set; }
+        public MoveList ComboList { get; set; } 
         #endregion
 
         #region Constructor

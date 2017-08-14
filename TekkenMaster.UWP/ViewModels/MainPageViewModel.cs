@@ -92,7 +92,7 @@ namespace TekkenMaster.UWP.ViewModels
         private async void Loaded()
         {
             await TekkenLibrary.Master.Instance.LoadAsync();
-            _unityContainer.TryResolve<CharactersViewModel>().Characters = CharactersViewModel.LoadCharacters(TekkenLibrary.Master.Instance.Characters);
+            //_unityContainer.TryResolve<CharactersViewModel>().Characters = CharactersViewModel.LoadCharacters(TekkenLibrary.Master.Instance.Characters);
         }
         #endregion
     }

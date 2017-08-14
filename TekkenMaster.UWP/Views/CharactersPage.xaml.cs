@@ -10,9 +10,9 @@ namespace TekkenMaster.UWP.Views
     /// <summary>
     /// それ自体で使用できる空白ページまたはフレーム内に移動できる空白ページ。
     /// </summary>
-    public sealed partial class CharactersView : UserControl, INotifyPropertyChanged
+    public sealed partial class CharactersPage : UserControl, INotifyPropertyChanged
     {
-        public CharactersView()
+        public CharactersPage()
         {
             this.InitializeComponent();
             DataContextChanged += DataContextChangedHandler;
@@ -20,11 +20,11 @@ namespace TekkenMaster.UWP.Views
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public CharactersViewModel ConcreteDataContext
+        public CharactersPageViewModel ConcreteDataContext
         {
             get
             {
-                return DataContext as CharactersViewModel;
+                return DataContext as CharactersPageViewModel;
             }
         }
 

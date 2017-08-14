@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="TekkenMaster.UWP.Views.CharactersView"
+    x:Class="TekkenMaster.UWP.Views.CharactersPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:v="using:TekkenMaster.UWP.Views"
@@ -10,7 +10,7 @@
     prismMvvm:ViewModelLocator.AutoWireViewModel="True"
     mc:Ignorable="d">
     <UserControl.Resources>
-        <DataTemplate x:Key="CharactersView.DataTemplate" x:DataType="vm:CharacterViewModel">
+        <DataTemplate x:Key="CharactersPage.DataTemplate" x:DataType="vm:CharacterViewModel">
             <Button BorderBrush="Red" Height="100" Width="100">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -25,7 +25,7 @@
     </UserControl.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView ItemsSource="{x:Bind ConcreteDataContext.Characters}"
-                  ItemTemplate="{StaticResource CharactersView.DataTemplate}">
+                  ItemTemplate="{StaticResource CharactersPage.DataTemplate}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <ItemsWrapGrid Orientation="Horizontal"/>
